@@ -126,9 +126,9 @@ section div {
     padding:10px 50px;  
 }
 .product img{
-    width:225px;
-    height:225px;
-    padding:20px 10px 0px 10px;
+    width:279px;
+    height:279px;
+    padding:20px 10px 0px 5px;
     margin-bottom: 0;
 }
 .view-product{
@@ -152,7 +152,7 @@ footer {
     height: 100%;
     background-color: #333333;
 }
-#product-display {
+.product-display {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -280,3 +280,44 @@ footer h2{
     color: #f6f6f6;
     font-size:20px;
 }
+
+#about-section h1 {
+    align-items: center;
+    text-align: center;
+    font-size: 40px;
+    padding:10px;
+}
+#about-section h1 span{
+    font-size:70px;
+    position:relative;
+    top:10px;
+}
+.about-content {
+    display: flex;
+    flex-direction: row;
+    padding: 25px;
+    justify-content: space-evenly;
+}
+.about-content div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 50px;
+}
+.about-content img {
+    border:#000000 1px solid;
+    border-radius: 10px;
+    width:550px;
+    height:550px;
+}
+#community {
+    border:#000000 1px solid;
+    border-radius: 10px;
+    width:650px;
+    height:500px;
+    position: relative;
+    left:300px;
+}
+#sneakr-heading {
+    text-align: center;
+} 
