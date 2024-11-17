@@ -341,8 +341,8 @@ footer h2{
     }
     nav a{
         justify-content: space-between;
-        margin-right:20px;
-        margin-left:20px;
+        margin-right:0px;
+        margin-left:00px;
     }
     nav{
         padding:3px 150px;
@@ -411,13 +411,12 @@ footer h2{
     }
     #review p {  
         position: relative;
-        right:130px;
         }
     footer li,a{
         position: relative;
         display: flex;
         right: 105px;
-    }
+    }   
     footer .footerlogo{
         font-size: 20px;
         position: relative;
@@ -426,13 +425,14 @@ footer h2{
     }
     .mobile-app-images{
         display: none;
+        
     }
     .view-product{
-        align-items: center;
         width: 100%;
-        padding: 10px;
-        margin-left: 40px;
-        margin-right: 30px;
+        padding:0px;
+        margin:0;
+        position: relative;
+        left:50px;
     }
     footer .footerlogo {
         display: none;
@@ -456,5 +456,16 @@ footer h2{
         margin-top: 10px;
         position: relative;
         bottom:140px;
+    }
+    #copyright {
+        left:10px
+    }
+    footer {
+        min-height: 650px;
+    }   
+}
+@media (max-width:1155px){
+    #MobileAppPreview{
+        display: none;
     }
 }
