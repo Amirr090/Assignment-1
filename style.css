@@ -4,6 +4,8 @@ body{
     margin:0;
 }
 .logo {
+    font-family: 'futura-pt', sans-serif;
+    font-weight: bold;
     padding:0px;
     position:relative;
     left:10px;
@@ -16,6 +18,7 @@ body{
 }
 nav a{
     display: flex;
+    font-family: "Poppins", sans-serif;
     padding:10px;
     font-weight:bold;
     text-decoration: none;
@@ -113,6 +116,10 @@ nav{
     flex-direction: row;
     justify-content: space-between;
 }
+#perks-list h3 {
+    font-size: 20px;
+    font-family: 'Futura', 'Helvetica', 'Arial', sans-serif;
+}
 .line {
     border:1px solid #433c3c;
     margin:7px;
@@ -129,7 +136,7 @@ section div {
     justify-content: space-between;
     padding:10px 40px;  
 }
-.product img{
+.product-display img{
     width:279px;
     height:279px;
     padding:20px 10px 0px 5px;
@@ -146,6 +153,11 @@ section div {
     margin-left: 30px;
     margin-right: 30px;
 }
+.view-product h1,.view-product a {
+    font-size:2rem;
+    color: #000000;
+    font-family: 'Poppins', sans-serif;
+}
 a{
     text-decoration: none;
 }
@@ -161,6 +173,9 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.product-display p,#perks-list p {
+    font-family: 'Futura', 'Helvetica', 'Arial', sans-serif;
 }
 .product-list{
     display: flex;
@@ -342,10 +357,10 @@ footer h2{
     nav a{
         justify-content: space-between;
         margin-right:0px;
-        margin-left:00px;
+        margin-left:0px;
     }
     nav{
-        padding:3px 150px;
+        padding:3px 150px 3px 150px;
     }   
     .logo{
         font-size: 30px;
@@ -428,11 +443,13 @@ footer h2{
         
     }
     .view-product{
-        width: 100%;
-        padding:0px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 100%;
+        padding: 0px 0px 0px 40px;
         margin:0;
         position: relative;
-        left:50px;
     }
     footer .footerlogo {
         display: none;
@@ -464,8 +481,66 @@ footer h2{
         min-height: 650px;
     }   
 }
+@media (max-width:397px){
+    nav{
+        padding:3px 150px 3px 0px;
+    }   
+    .footer-links{
+        padding:0;
+        margin:0;
+    }
+}
 @media (max-width:1155px){
     #MobileAppPreview{
         display: none;
     }
+}
+
+/* Sneaker Page */
+#flexbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap:wrap;
+    gap: 10px;
+}
+#flexbox1 {
+    display: flex;
+}
+.sneaker-product-display img{
+    width:229px;
+    height:229px;
+    padding:20px;
+    margin-bottom: 0;
+}
+.sneaker-product-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.filter {
+    display: flex;
+    flex-direction: column;
+    width:600px;
+    border: 1px solid #000000;
+    margin:25px;
+}
+.filter #brand-filter {
+    display:flex;
+    flex-direction: row;
+    gap:10px;
+    flex-wrap: wrap;
+}
+.filter #brand-filter button  {
+    width: 70px;
+    height: 50px;
+    padding: 10px;
+    border: 1px solid #000000; 
+}
+.filter #cat-filter,.filter #price-filter {
+    display: flex;
+    flex-direction: column;
+}
+.filter #brand-filter ,.filter #cat-filter ,.filter #price-filter  {
+    padding: 10px;
 }
