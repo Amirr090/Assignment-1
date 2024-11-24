@@ -45,64 +45,78 @@
             quality, versatility, and trend-forward designs. Whether you're dressing up or down, you'll find<br>
              the perfect look to express your unique style. Choose from a selection of Stussy, Nike and etc.</p>
     </section>
-    <p>HOME/SNEAKER</p>
+    <span id="sneakerpage-link"><a href="index.html">HOME</a> / <a href="sneaker_page.html">SNEAKER</a></span>
     <div id="flexbox1">
         <div class="filter">
             <div id="cat-filter">
-                <label>FILTER</label>
-                <label><input type="radio" id="new-releases" class="filter-checkbox">New Releases</label>
-                <label><input type="radio" id="trending" class="filter-checkbox">Trending</label>
-                <label><input type="radio" id="on-sale" class="filter-checkbox">On Sale</label>
+                <h3>FILTER  <svg xmlns="http://www.w3.org/2000/svg" height="14" width="14" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#0062ff" d="M3.9 54.9C10.5 40.9 24.5 32 40 32l432 0c15.5 0 29.5 8.9 36.1 22.9s4.6 30.5-5.2 42.5L320 320.9 320 448c0 12.1-6.8 23.2-17.7 28.6s-23.8 4.3-33.5-3l-64-48c-8.1-6-12.8-15.5-12.8-25.6l0-79.1L9 97.3C-.7 85.4-2.8 68.8 3.9 54.9z"/></svg></h3>
+                <h4>Category</h4>
+                <label><input type="checkbox" class="filter-checkbox" value="All" onclick="filterByCategory()" name="category" checked>All</label>
+                <label><input type="checkbox" class="filter-checkbox" value="New Releases" onclick="filterByCategory()" name="category">New Releases</label>
+                <label><input type="checkbox" class="filter-checkbox" value="On Sale" onclick="filterByCategory()" name="category">On Sale</label>
             </div>
             <div id="brand-filter">
-                <button>Nike</button>
-                <button>Adidas</button>
-                <button>New Balance</button>
+                <h4>Brands</h4>
+                <div>
+                    <button id="nike">Nike</button>
+                    <button id="adidas">Adidas</button>
+                    <button id="newbalance">New Balance</button>
+                </div>
             </div>
             <div id="price-filter">
-                <label><input type="radio">Below S$100</label>
-                <label><input type="radio">Below S$150</label>
+                <h4>Price</h4>
+                <label><input type="checkbox" class="filter-checkbox" name="price" value="below150" onclick="filterByPrice()" > Below $150</label>
+                <label><input type="checkbox" class="filter-checkbox" name="price" value="below250" onclick="filterByPrice()"> Below $250</label>
             </div>
         </div>
-        <div id="flexbox">
-            <div class="sneaker-product-display">
-                <img src="images/NIKE+AIR+MAX+WAFFLE+SP.png" alt="Nike Air Max">
-                <p>Air Max Waffle <br>Men’s Shoes<br> S$229.00</p>
+        <div id="flexbox"></div>
+     </div>
+    <!-- Website Footer -->
+    <footer>
+        <div class="socials-address">
+            <a class="footerlogo" href="#">SNEAKR</a>
+            <div id="socials">
+                <h2>Follow Us On</h2>
+                <div>
+                <svg xmlns="http://www.w3.org/2000/svg" height="60" width="60" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#ffffff" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" height="60" width="60" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#ffffff" d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" height="60" width="60" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#ffffff" d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z"/></svg>
+                </div>
             </div>
-            <div class="sneaker-product-display">
-                <img src="images/MadeInUSA_990v6.webp" alt="New Balance 990v6">
-                <p>Made in USA 990v6 <br>Men’s Shoes<br> S$229.00</p>
-            </div>
-            <div class="sneaker-product-display">
-                <img  src="images/NIKE+DUNK+LOW+RETRO.png" alt="Nike Dunks">
-                <p>Nike Dunk Low Retro <br> Men's Shoes <br> S$99.90</p>
-            </div>
-            <div class="sneaker-product-display">
-                <img src="images/WMNS+AIR+JORDAN+1+LOW.png" alt="Nike Jordans Low">
-                <p> Air Jordan 1 Low <br> Women's Shoes <br> S$129.90</p>
-            </div>
-            <div class="sneaker-product-display">
-                <img  src="images/NewBalance_80_Womens.webp" alt="New Balance 80">
-                <p>New Balance 80 <br> Women’s Shoes <br> S$120</p>
-            </div>
-            <div class="sneaker-product-display">
-                <img src="images/adidas-gazelle-shoes.avif" alt="Adidas Gazelle">
-                <p>Gazelle Shoes <br> Men’s Shoes <br> S$79.50</p>
-            </div>
-            <div class="sneaker-product-display">
-                <img  src="images/NIKE+C1TY1.png" alt="Nike City">
-                <p>Nike C1TY 'Brownstone' <br> Men’s Shoes <br> S$155</p>
-            </div>
-            <div class="sneaker-product-display">
-                <img src="images\AIR+JORDAN+1+LOW+SE.png" alt="Air Jordan Low">
-                <p>Air Jordan 1 Low SE <br>Men's Shoes<br> S$129.90</p>
-            </div>
-            <div class="sneaker-product-display">
-                <img src="images/Samba_OG_Shoes_White_B75806_01_00_standard.avif" alt="Adidas Samba OG">
-                <p>Samba OG Shoes <br>Men’s Shoes<br> S$140.00</p>
+            <div>
+                <h2>Find Us At</h2>
+                <p>SneakerHub SG<br>123 Kallang Way, #05-34<br>Singapore 349567 <br>+(65) 68908549</p>
             </div>
         </div>
-    </div>
-
+        <p id="copyright">&copy; SNEAKR. All rights reserved.     Best viewed in Chrome</p>
+        <div class="footer-links">
+            <div id="footer-cat">
+                <h2>ABOUT</h2>
+                <div id="links">
+                    <a href="about_page.html">About Us</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Customer Service</a>        
+                    <a href="#">Return Policy</a>
+                </div>
+            </div>
+            <div id="footer-cat">
+                <div id="links">
+                    <h2>MY ACCOUNT</h2>
+                    <a href="#">My Account</a>
+                    <a href="#">My Cart</a>
+                    <a href="#">Wishlist</a>
+                </div>
+            </div>
+            <div id="footer-cat">
+                <div id="links">
+                    <h2>FAQ</h2>
+                    <a href="#">Order FAQ</a>
+                    <a href="#">Return Policy FAQ</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -154,7 +154,7 @@ section div {
     margin-right: 30px;
 }
 .view-product h1,.view-product a {
-    font-size:2rem;
+    font-size:25px;
     color: #000000;
     font-family: 'Poppins', sans-serif;
 }
@@ -497,6 +497,9 @@ footer h2{
 }
 
 /* Sneaker Page */
+#flexbox1 {
+    display: flex;
+}
 #flexbox {
     display: flex;
     flex-direction: row;
@@ -504,8 +507,18 @@ footer h2{
     flex-wrap:wrap;
     gap: 10px;
 }
-#flexbox1 {
+#brand-filter button {
+    border-radius: 15px;  
+    border:1px solid #0000ff;
+}
+#brand-filter button:hover {
+    background-color: #00000030;
+}
+.sneaker-product-display {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #00000020;
 }
 .sneaker-product-display img{
     width:229px;
@@ -513,29 +526,64 @@ footer h2{
     padding:20px;
     margin-bottom: 0;
 }
-.sneaker-product-display {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.sneaker-product-display:hover{
+    border: 1px solid #000000;
+    background-color: #00000010;
 }
 .filter {
-    display: flex;
+    display:flex;
     flex-direction: column;
-    width:600px;
-    border: 1px solid #000000;
+    width:200px;
+    border: 1px solid #00000020;
+    border-radius: 5px;
     margin:25px;
+    flex-grow: 0;
+    flex-shrink: 0; 
+    flex-basis: 200px;
 }
 .filter #brand-filter {
     display:flex;
-    flex-direction: row;
+    flex-direction: column;
     gap:10px;
     flex-wrap: wrap;
+}
+.filter #brand-filter div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 .filter #brand-filter button  {
     width: 70px;
     height: 50px;
     padding: 10px;
     border: 1px solid #000000; 
+}
+#sneakerpage-link {
+    display: flex;
+    font-size: 20px;
+    gap:5px;
+    position:relative;
+    left: 5px;
+    padding: 10px;
+    margin:10px;
+}
+#sneakerpage-link a {
+    color: #000000;
+    font-size: 20px;
+    text-decoration: none;
+}
+#sneakerpage-link a:hover {
+    text-decoration: underline;
+}
+#cat-filter h3 {
+    font-size: 20px;
+    padding: 10px;
+    color: #0062ff;
+}
+.filter label{
+    font-size: 18px;
+    padding: 3px;
 }
 .filter #cat-filter,.filter #price-filter {
     display: flex;
