@@ -51,22 +51,20 @@
             <div id="cat-filter">
                 <h3>FILTER  <svg xmlns="http://www.w3.org/2000/svg" height="14" width="14" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#0062ff" d="M3.9 54.9C10.5 40.9 24.5 32 40 32l432 0c15.5 0 29.5 8.9 36.1 22.9s4.6 30.5-5.2 42.5L320 320.9 320 448c0 12.1-6.8 23.2-17.7 28.6s-23.8 4.3-33.5-3l-64-48c-8.1-6-12.8-15.5-12.8-25.6l0-79.1L9 97.3C-.7 85.4-2.8 68.8 3.9 54.9z"/></svg></h3>
                 <h4>Category</h4>
-                <label><input type="checkbox" class="filter-checkbox" value="All" onclick="filterByCategory()" name="category" checked>All</label>
-                <label><input type="checkbox" class="filter-checkbox" value="New Releases" onclick="filterByCategory()" name="category">New Releases</label>
-                <label><input type="checkbox" class="filter-checkbox" value="On Sale" onclick="filterByCategory()" name="category">On Sale</label>
+                <label><input type="checkbox" class="filter-checkbox" value="All"  name="category" checked>All</label>
+                <label><input type="checkbox" class="filter-checkbox" value="New Releases"  name="category">New Releases</label>
+                <label><input type="checkbox" class="filter-checkbox" value="On Sale"  name="category">On Sale</label>
             </div>
             <div id="brand-filter">
                 <h4>Brands</h4>
-                <div>
-                    <button id="nike">Nike</button>
-                    <button id="adidas">Adidas</button>
-                    <button id="newbalance">New Balance</button>
-                </div>
+                <label><input type="checkbox" class="filter-checkbox" value="nike"  name="brand">Nike</label>
+                <label><input type="checkbox" class="filter-checkbox" value="adidas"  name="brand">Adidas</label>
+                <label><input type="checkbox" class="filter-checkbox" value="new balance"  name="brand">New Balance</label>
             </div>
             <div id="price-filter">
                 <h4>Price</h4>
-                <label><input type="checkbox" class="filter-checkbox" name="price" value="below150" onclick="filterByPrice()" > Below $150</label>
-                <label><input type="checkbox" class="filter-checkbox" name="price" value="below250" onclick="filterByPrice()"> Below $250</label>
+                <label><input type="checkbox" class="filter-checkbox" name="price" value="below150"  > Below $150</label>
+                <label><input type="checkbox" class="filter-checkbox" name="price" value="below250" > Below $250</label>
             </div>
         </div>
         <div id="flexbox"></div>
@@ -102,7 +100,7 @@
             </div>
             <div id="footer-cat">
                 <div id="links">
-                    <h2>MY ACCOUNT</h2>
+                    <h2>ACCOUNT</h2>
                     <a href="#">My Account</a>
                     <a href="#">My Cart</a>
                     <a href="#">Wishlist</a>

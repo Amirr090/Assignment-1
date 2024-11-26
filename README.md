@@ -1,4 +1,8 @@
 # Sneakr E-commerce Website Assignment-1
+## To Do:
+- Styling of product and product detail page
+- Add either add to cart or search function javascript
+- Standardise all fonts use
 ## Design Process
 ### External user's goal:
 The site's users are potential customers who are interesting in looking for more information about my products

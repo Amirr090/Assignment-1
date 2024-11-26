@@ -63,73 +63,78 @@ let Sambas = {
 }
 const products = [NikeAirMax, MadeinUSA990v6, NikeDunks, AirJordan1W, NewBalance80, 
     GazelleShoes, NikeCity, AirJordan1M, Sambas];
+function applyFilters() {
+    // Get selected filter values
+    const selectedCategories = Array.from(document.querySelectorAll('input[name="category"]:checked')).map(input => input.value);
+    const selectedBrands = Array.from(document.querySelectorAll('input[name="brand"]:checked')).map(input => input.value);
+    const selectedPrices = Array.from(document.querySelectorAll('input[name="price"]:checked')).map(input => input.value);
 
-// Function to display products
+    // Filter products based on selected categories
+    let filteredProducts = products;
+    
+    // Filter by Category
+    if (selectedCategories.length > 0) {
+        if (!selectedCategories.includes("All")) {
+            filteredProducts = filteredProducts.filter(product => selectedCategories.includes(product.category));
+        }
+    }
+    // Filter by Brand
+    if (selectedBrands.length > 0) {
+        filteredProducts = filteredProducts.filter(product => {
+            if (selectedBrands.includes("nike") && product.name.includes("Nike")) return true;
+            else if (selectedBrands.includes("adidas") && product.name.includes("Adidas")) return true;
+            else if (selectedBrands.includes("new balance") && product.name.includes("New Balance")) return true;
+            else return false;
+        });
+    }
+
+    // Filter by Price
+    if (selectedPrices.length > 0) {
+        filteredProducts = filteredProducts.filter(product => {
+            if (selectedPrices.includes("below150") && product.price < 150) return true;
+            else if (selectedPrices.includes("below250") && product.price < 250) return true;
+            else return false;
+        });
+    }
+    // Display the filtered products
+    displayProducts(filteredProducts);
+}
+
+// Display products based on filtered results
 function displayProducts(filteredProducts) {
     const container = document.getElementById("flexbox");
-    container.innerHTML = '';
+    container.innerHTML = ''; // Clear the container before adding new filtered products
     filteredProducts.forEach(product => {
         const productDiv = document.createElement("div");
         productDiv.classList.add("sneaker-product-display");
+        // Handle click event for specific product
         if (product.name === 'Nike Dunk Low Retro') {
             productDiv.addEventListener("click", () => {
                 window.location.href = "product_page.html";
-            })
+            });
         }
 
         // Create HTML content for each product
         productDiv.innerHTML = `
             <img src="${product.image}" alt="${product.name}">
             <p>${product.name}<br>${product.gender}<br>S$${product.price}</p>
-        `;  
+        `;
+
         // Append the product div to the container
         container.appendChild(productDiv);
     });
 }
-function filterByCategory() {
-    const selectedCategory = document.querySelector('input[name="category"]:checked').value;
+// Add event listeners to filter checkboxes
+document.querySelectorAll('.filter-checkbox').forEach(checkbox => {
+    checkbox.addEventListener('change', applyFilters); // Trigger filter updates whenever a checkbox is clicked
+});
 
-    let filteredProducts;
-    
-    if (selectedCategory === "New Releases") {
-        // Filter products based on category
-        filteredProducts = products.filter(product => product.category === selectedCategory);
-    } else if (selectedCategory === "On Sale") {
-        // Filter products based on category
-        filteredProducts = products.filter(product => product.category === selectedCategory);
-    } else if (selectedCategory === "All") {
-        // Display all products
-        filteredProducts = products;
-    }
-    displayProducts(filteredProducts);
-}
-// Function to filter products based on price
-function filterByPrice() {
-    const selectedPrice = document.querySelector('input[name="price"]:checked').value;
-    let filteredProducts;
-    if (selectedPrice === "below150") {
-        // Filter products below $150
-        filteredProducts = products.filter(product => product.price < 150.00);
-    } else if (selectedPrice === "below250") {
-        // Filter products above $150
-        filteredProducts = products.filter(product => product.price <250.00);
-    } 
-    displayProducts(filteredProducts);
-}
-// Button Filters for Brands
-var button = document.getElementById("nike");
-button.addEventListener("click", () => {
-    filteredProducts = products.filter(product => product.name.includes("Nike"));
-    displayProducts(filteredProducts);
-})
-var button = document.getElementById("adidas");
-button.addEventListener("click", () => {
-    filteredProducts = products.filter(product => product.name.includes("Adidas"));
-    displayProducts(filteredProducts);
-})
-var button = document.getElementById("newbalance");
-button.addEventListener("click", () => {
-    filteredProducts = products.filter(product => product.name.includes("New Balance"));
-    displayProducts(filteredProducts);
-})
+// Initial display (show all products)
 displayProducts(products);
+// Add event listeners to filter checkboxes
+document.querySelectorAll('.filter-checkbox').forEach(checkbox => {
+    checkbox.addEventListener('change', applyFilters); // Trigger filter updates whenever a checkbox is clicked
+});
+// Initial display (show all products)
+displayProducts(products);
+
