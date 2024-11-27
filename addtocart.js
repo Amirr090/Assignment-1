@@ -8,7 +8,7 @@ let NikeDunks = {
 let count = 0;
 function CartSummary(product,count) {
     totalprice = count*product.price;
-    document.getElementById("cart-summary").innerHTML = `Total Price: S$${totalprice}`;
+    document.getElementById("cart-summary").innerHTML = `Total Price: S$${totalprice}<hr>`;
     document.getElementById("cart-summary").classList.add("summary");
 }
 // Check the current page based on the URL and execute the corresponding logic
@@ -40,15 +40,38 @@ if (window.location.pathname.includes("product_page.html")) {
     } else {
         // If no item is found in the cart
         document.getElementById("remove-cart-item").style.display = "none";
+        document.getElementById("add-cart-item").style.display = "none";
         alert("Your cart is empty.");
     }
     // Remove item from cart
     document.getElementById("remove-cart-item").addEventListener("click", function() {
-        count-=1;
-        localStorage.removeItem("cartItem"); // Remove the cart item from localStorage
-        document.getElementById("cart-item").style.display = "none"; // Hide the cart item
-        document.getElementById("remove-cart-item").style.display = "none"; // Hide the remove button
-        CartSummary(cartItem,count);
+        if (count===0)
+        {
+            document.getElementById("remove-cart-item").style.display = "none";
+            alert("You have no items in your cart to remove.");
+        }
+        else {
+            count-=1;
+            localStorage.removeItem("cartItem"); // Remove the cart item from localStorage
+            CartSummary(cartItem,count);
+            if (count===0)
+            {
+                document.getElementById("cart-item").style.display = "none";
+            }
+        }
+    });
+    // Add item to cart
+    document.getElementById("add-cart-item").addEventListener("click", function() {
+        if (count===0)
+        {
+            document.getElementById("add-cart-item").style.display = "none";
+        }
+        else {
+            count+=1;
+            localStorage.setItem("cartItem", JSON.stringify(NikeDunks)); // Add the cart item back to localStorage
+            document.getElementById("cart-item").style.display = "block"; // Show the cart item
+            CartSummary(cartItem,count);
+        }
     });
     // Back function to go previous window
     document.getElementById("back-cart").addEventListener("click", function() {

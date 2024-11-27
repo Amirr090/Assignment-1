@@ -17,6 +17,8 @@ let NikeDunks = {
     name: "Nike Dunk Low Retro",
     gender: "Men's Shoes",
     price: 99.90,
+    discount : 30,
+    startPrice: 165.00,
     image: "images/NIKE+DUNK+LOW+RETRO.png",
     category: "On Sale",
 }
@@ -24,6 +26,8 @@ let AirJordan1W = {
     name: "Nike Air Jordan 1 Low",
     gender: "Women's Shoes",
     price: 129.00,
+    discount:20,
+    startPrice: 229.00,
     image: "images/WMNS+AIR+JORDAN+1+LOW.png",
     category: "On Sale",
 }
@@ -31,6 +35,8 @@ let NewBalance80 = {
     name: "New Balance 80",
     gender: "Women's Shoes",
     price: 120.00,
+    discount:20,
+    startPrice: 229.00,
     image: "images/NewBalance_80_Womens.webp",
     category: "On Sale",
 }
@@ -38,6 +44,8 @@ let GazelleShoes = {
     name: " Adidas Gazelle Shoes",
     gender: "Men's Shoes",
     price: 79.50,
+    discount:20,
+    startPrice: 229.00,
     image: "images/adidas-gazelle-shoes.avif",
     category: "On Sale",
 }
@@ -68,10 +76,8 @@ function applyFilters() {
     const selectedCategories = Array.from(document.querySelectorAll('input[name="category"]:checked')).map(input => input.value);
     const selectedBrands = Array.from(document.querySelectorAll('input[name="brand"]:checked')).map(input => input.value);
     const selectedPrices = Array.from(document.querySelectorAll('input[name="price"]:checked')).map(input => input.value);
-
     // Filter products based on selected categories
     let filteredProducts = products;
-    
     // Filter by Category
     if (selectedCategories.length > 0) {
         if (!selectedCategories.includes("All")) {
@@ -87,7 +93,6 @@ function applyFilters() {
             else return false;
         });
     }
-
     // Filter by Price
     if (selectedPrices.length > 0) {
         filteredProducts = filteredProducts.filter(product => {
@@ -113,15 +118,23 @@ function displayProducts(filteredProducts) {
                 window.location.href = "product_page.html";
             });
         }
-
-        // Create HTML content for each product
-        productDiv.innerHTML = `
-            <img src="${product.image}" alt="${product.name}">
-            <p>${product.name}<br>${product.gender}<br>S$${product.price}</p>
-        `;
-
-        // Append the product div to the container
-        container.appendChild(productDiv);
+        if (product.category === 'On Sale') {
+            productDiv.innerHTML = `
+                <img src="${product.image}" alt="${product.name}">
+                <p>${product.name}<br>${product.gender}<br>S$${product.price} <span class="start-price">
+                S$${product.startPrice}</span><br><span class="discount">${product.discount}% Off</span></p>
+            `;
+            // Append the product div to the container
+            container.appendChild(productDiv);}
+        
+        else {        
+            // Create HTML content for each product
+            productDiv.innerHTML = `
+                <img src="${product.image}" alt="${product.name}">
+                <p>${product.name}<br>${product.gender}<br>S$${product.price}</p>
+            `;
+            // Append the product div to the container
+            container.appendChild(productDiv);}
     });
 }
 // Add event listeners to filter checkboxes

@@ -3,6 +3,9 @@ body{
     padding:0;
     margin:0;
 }
+a{
+    text-decoration: none;
+}
 .logo {
     font-family: 'futura-pt', sans-serif;
     font-weight: bold;
@@ -24,6 +27,9 @@ nav a{
     text-decoration: none;
     color:#f6f6f6;
     font-size: 20px;
+}
+nav a:hover {
+    color: #f6f6f690;
 }
 nav{
     background-color: #333333;
@@ -59,7 +65,7 @@ nav{
     color:#00000060
 }
 .discount {
-    color:#00A6FF;
+    color:#2000d3;
 }
 #check{
     color: #EC4104;
@@ -97,6 +103,9 @@ nav{
     background: transparent;
     width:150%;
 }
+.search:hover {
+    background-color: #00000030;
+}
 #icons {
     display: flex;
     justify-content: space-between;
@@ -109,7 +118,6 @@ nav{
     text-decoration: none;
     color: #000000;
 }
-
 .material-symbols-outlined{
     margin:10px;
 }
@@ -175,8 +183,8 @@ section div {
     color: #000000;
     font-family: 'Poppins', sans-serif;
 }
-a{
-    text-decoration: none;
+.view-product h1:hover,.view-product a:hover {
+    text-decoration: underline;
 }
 footer {
     padding:65px 0px 0px 0px;
@@ -190,6 +198,13 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.product-display a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #000000;
 }
 .product-display:hover{
     border: 1px solid #000000;
@@ -268,6 +283,9 @@ footer {
     bottom:180px;
     right:20px;
 }
+#learn-more-link:hover {
+    text-decoration: underline;
+}
 footer .footerlogo{
     text-decoration: none; 
     font-size: 90px; 
@@ -281,9 +299,7 @@ footer .footerlogo{
 .socials-address{
     display: flex;
     justify-content: space-between;
-    padding:70px;
-    position: relative;
-    bottom:100px;
+    padding:0px 70px 30px 70px;
 }
 #socials{
     display: flex;
@@ -303,7 +319,8 @@ footer h2{
     display: flex;
     justify-content: center;    
     color: #f6f6f6;
-    gap:100px;
+    gap:170px;
+    margin-bottom:100px;
 }
 .footer-links h2 {
     font-size: 40px;
@@ -311,17 +328,21 @@ footer h2{
 #links {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+    gap: 10px;
     align-items: baseline;
 }
 #links a {
     color: #f6f6f6;
     font-size:20px;
 }
+#links a:hover {
+    text-decoration: underline;
+}
 #copyright{
-    display: flex;
+    text-align: center;
     color:#f6f6f6;
-    position: relative;
-    top:240px;
+    padding:10px; margin:0px;
 }
 /* About page */
 #about-section h1 {
@@ -334,6 +355,8 @@ footer h2{
     font-size:70px;
     position:relative;
     top:10px;
+    color:#EC4104;
+    font-family: 'futura-pt', sans-serif;
 }
 .about-content {
     display: flex;
@@ -371,19 +394,303 @@ footer h2{
     left:300px;
 }
 #sneakr-heading {
-    text-align: center;
+    text-align: center; font-size:40px;
 } 
 .product-listing-heading {
     text-align: center;
+}
+
+/* Sneaker Page */
+.product-listing-heading h1 {
+    font-size: 40px;
+    text-align: center;
+    font-size:'futura-pt', sans-serif;
+}
+.product-listing-heading p {
+    font-family: 'Futura', 'Helvetica', 'Arial', sans-serif;
+}
+#flexbox1 {
+    display: flex;
+}
+#flexbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap:wrap;
+    gap: 10px;
+}
+.sneaker-product-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    flex-grow: 0;
+    height:fit-content;
+    border: 1px solid #00000020;
+}
+.sneaker-product-display img{
+    width:229px;
+    height:229px;
+    padding:20px;
+    margin-bottom: 0;
+}
+.sneaker-product-display:hover{
+    border: 1px solid #000000;
+    background-color: #00000010;
+}
+.filter {
+    display:flex;
+    flex-direction: column;
+    width:200px;
+    border: 1px solid #00000020;
+    border-radius: 5px;
+    margin:25px;
+    flex-grow: 0;
+    flex-shrink: 0; 
+    flex-basis: 200px;
+}
+.filter #brand-filter {
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+    flex-wrap: wrap;
+}
+.filter #brand-filter div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.filter h4 {
+    font-size:25px;
+    padding:10px;
+    margin:0px;
+}
+#sneakerpage-link {
+    display: flex;
+    font-size: 20px;
+    gap:5px;
+    position:relative;
+    left: 5px;
+    padding: 10px;
+    margin:10px;
+}
+#sneakerpage-link a {
+    color: #000000;
+    font-size: 20px;
+    text-decoration: none;
+}
+#sneakerpage-link a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+#cat-filter h3 {
+    font-size: 20px;
+    padding: 10px;
+    color: #0062ff;
+}
+.filter label{
+    font-size: 18px;
+    padding: 3px;
+}
+.filter #cat-filter,.filter #price-filter {
+    display: flex;
+    flex-direction: column;
+}
+.filter #brand-filter ,.filter #cat-filter ,.filter #price-filter  {
+    padding: 10px;
+}
+
+/* Product page*/
+#back-sneakers {
+    padding:30px;
+}
+#product-image-review {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#product-details {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-direction: row;
+    margin-top: 0px;
+    padding: 10px;
+}
+#product-details img {
+    width: 500px;
+    height: 500px;
+    border: 3px solid #00000010;
+    border-radius: 30px;
+}   
+#product-details button {
+    width:85px;
+    height:50px;
+}
+#sizes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 5px;
+}
+#sizes button {
+    border-radius:10px;
+    border: 1px solid #00000020;
+    background-color: #ffffff;
+}
+#sizes button:hover {
+    border: 1px solid #000000;
+    background-color: #e6dfdf;
+}
+#product-desc {
+    display: flex;
+    flex-wrap:wrap;
+    flex-direction: column;
+    gap: 28px;
+    padding: 10px; padding-left: 50px;
+    width:300px;
+    border-left: 2px solid #00000030;
+}
+#product-desc a {
+    text-decoration: underline;
+    color:#000000;
+}
+#product-desc a:hover {
+    color:#00000070;
+}
+#product-desc label {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+#product-details .action-button {
+    width:300px;
+    border-radius: 50px;
+}
+#add-to-cart {
+    background-color: #000000; color:#ffffff;
+    border:0px;
+}
+#add-to-cart:hover {
+    background-color: #00000095; 
+}
+#wishlist {
+    border:1px solid #00000030;
+}
+#wishlist:hover {
+    border:1px solid #000000;
+}
+#Review {    
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border:2px solid #000000;
+    border-radius: 20px;
+}
+#Review div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;;
+}
+/* Product Detail Page */
+#back-product {
+    padding:30px;
+}
+#product-detail-page-flexbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 70px;
+    padding: 10px;
+    margin:10px 100px 100px 100px;
+}
+#product-detail-page-flexbox img {
+    width: 500px;
+    height: 500px;
+    border: 5px solid #00000010;
+    border-radius: 30px;
+}
+#product-showcase {
+    font-size:20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#product-detail-description {
+    position: relative;
+    top:50px;
+}
+#product-detail-description h1 {
+    font-size: 40px;
+}
+#product-detail-description h2 {
+    font-size: 30px;
+}
+#product-detail-description .product-details, #product-detail-description .benefits, #product-detail-description .description{
+    font-size: 20px;
+}
+/* Cart Page */
+#back-cart {
+    padding:30px;
+}
+#cart-heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.cart-item-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    flex-grow: 0;
+    height:fit-content;
+}
+.cart-item-display img{
+    width:350px;
+    height:350px;
+    padding:20px;
+    margin-bottom: 0;
+}
+#cart-display {
+    margin-left:135px;
+    padding:0px 50px 50px 50px;
+    border: 1px solid #00000020;
+    border-radius: 20px;;
+}
+#summary-display {
+    display: flex;
+    flex-direction: column;  
+    margin-right:70px;
+    padding:0px 50px 50px 50px;
+    border: 1px solid #00000020;
+    border-radius: 20px;;
+}
+#summary-display #checkouts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap:30px;
+    padding: 10px;
+}
+#summary-display #checkouts button {
+    width: 200px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: #000000;
+    color: #ffffff;
+    border: 0px; 
+}
+#summary-display #checkouts button:hover {
+    background-color: #00000070;
 }
 /* Media Queries for Responsiveness */
 @media (max-width: 1200px) {
     .logo {
         font-size: 2rem; 
         left: 20px;
-    }
-    nav {
-
     }
     nav a {
         font-size: 1rem; 
@@ -429,11 +736,9 @@ footer h2{
     .product-list {
         padding: 10px; 
     }
-
     .latest-product, #trending-product, #sale-product {
         padding: 10px 2%; 
     }
-
     footer .footer-logo {
         font-size: 1.8rem; 
     }
@@ -532,188 +837,4 @@ footer h2{
     #copyright{
         top:820px;
     }
-}
-/* Sneaker Page */
-#flexbox1 {
-    display: flex;
-}
-#flexbox {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap:wrap;
-    gap: 10px;
-}
-#brand-filter button {
-    border-radius: 15px;  
-    border:1px solid #0000ff;
-}
-#brand-filter button:hover {
-    background-color: #00000030;
-}
-.sneaker-product-display {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-shrink: 0;
-    flex-grow: 0;
-    height:fit-content;
-    border: 1px solid #00000020;
-}
-.sneaker-product-display img{
-    width:229px;
-    height:229px;
-    padding:20px;
-    margin-bottom: 0;
-}
-.sneaker-product-display:hover{
-    border: 1px solid #000000;
-    background-color: #00000010;
-}
-.filter {
-    display:flex;
-    flex-direction: column;
-    width:200px;
-    border: 1px solid #00000020;
-    border-radius: 5px;
-    margin:25px;
-    flex-grow: 0;
-    flex-shrink: 0; 
-    flex-basis: 200px;
-}
-.filter #brand-filter {
-    display:flex;
-    flex-direction: column;
-    gap:10px;
-    flex-wrap: wrap;
-}
-.filter #brand-filter div {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-#sneakerpage-link {
-    display: flex;
-    font-size: 20px;
-    gap:5px;
-    position:relative;
-    left: 5px;
-    padding: 10px;
-    margin:10px;
-}
-#sneakerpage-link a {
-    color: #000000;
-    font-size: 20px;
-    text-decoration: none;
-}
-#sneakerpage-link a:hover {
-    text-decoration: underline;
-}
-#cat-filter h3 {
-    font-size: 20px;
-    padding: 10px;
-    color: #0062ff;
-}
-.filter label{
-    font-size: 18px;
-    padding: 3px;
-}
-.filter #cat-filter,.filter #price-filter {
-    display: flex;
-    flex-direction: column;
-}
-.filter #brand-filter ,.filter #cat-filter ,.filter #price-filter  {
-    padding: 10px;
-}
-/* Sneaker product page*/
-
-#product-details {
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-    flex-direction: row;
-    margin-top: 50px;
-    padding: 10px;
-}
-#product-details img {
-    width: 500px;
-    height: 500px;
-    border: 5px solid #00000010;
-    border-radius: 30px;
-}   
-#product-details button {
-    width:85px;
-    height: 50px;
-}
-#product-desc {
-    display: flex;
-    flex-wrap:wrap;
-    flex-direction: column;
-    gap: 28px;
-    padding: 10px;
-    width:300px;
-}
-#product-details .action-button {
-    width:300px;
-    border-radius: 50px;
-}
-
-/* Product Detail Page */
-
-#product-detail-page-flexbox {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    gap: 70px;
-    padding: 10px;
-    margin:10px 100px 100px 100px;
-}
-#product-detail-page-flexbox img {
-    width: 500px;
-    height: 500px;
-    border: 5px solid #00000010;
-    border-radius: 30px;
-}
-#product-showcase {
-    font-size:20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-#product-detail-description {
-    position: relative;
-    top:50px;
-}
-#product-detail-description h1 {
-    font-size: 40px;
-}
-#product-detail-description h2 {
-    font-size: 30px;
-}
-#product-detail-description .product-details, #product-detail-description .benefits, #product-detail-description .description{
-    font-size: 20px;
-}
-/* Cart Page */
-#cart-heading {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-.cart-item-display {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-shrink: 0;
-    flex-grow: 0;
-    height:fit-content;
-}
-.cart-item-display img{
-    width:350px;
-    height:350px;
-    padding:20px;
-    margin-bottom: 0;
-}
-.summary {
-
 }
