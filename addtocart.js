@@ -8,7 +8,10 @@ let NikeDunks = {
 let count = 0;
 function CartSummary(product,count) {
     totalprice = count*product.price;
-    document.getElementById("cart-summary").innerHTML = `Total Price: S$${totalprice}<hr>`;
+    document.getElementById("cart-summary").innerHTML = `
+    Total items: ${count}<hr><br>
+    Total Price: S$${totalprice}<hr><br>
+    `;
     document.getElementById("cart-summary").classList.add("summary");
 }
 // Check the current page based on the URL and execute the corresponding logic

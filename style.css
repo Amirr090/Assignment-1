@@ -1,4 +1,5 @@
-
+/* Stylesheet for website */
+/* Global */
 body{
     padding:0;
     margin:0;
@@ -6,6 +7,44 @@ body{
 a{
     text-decoration: none;
 }
+.start-price {
+    text-decoration:line-through;
+    color:#00000060
+}
+.discount {
+    color:#2000d3;
+}
+.material-symbols-outlined{
+    margin:10px;
+}
+/* Index HTML */
+/*Promotion Bar*/
+.promotion{
+    background-color: #333333;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#Code {
+    color:#f6f6f6;
+    padding:5px;
+}
+#sale{
+    padding:5px;
+    color:#00A6FF;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#locations {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#location {
+    color:#f6f6f6;
+    padding:5px;
+}
+/*Sneakr Logo*/
 .logo {
     font-family: 'futura-pt', sans-serif;
     font-weight: bold;
@@ -19,6 +58,17 @@ a{
     left:50px;
     top:10px;
 }
+/*Nav Bar*/
+nav{
+    background-color: #333333;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding:5px 250px;
+    box-sizing: border-box;
+    align-content: center;
+    height:max-content;
+}
 nav a{
     display: flex;
     font-family: "futura-pt ", sans-serif;
@@ -31,47 +81,7 @@ nav a{
 nav a:hover {
     color: #f6f6f690;
 }
-nav{
-    background-color: #333333;
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    padding:5px 250px;
-    box-sizing: border-box;
-    align-content: center;
-    height:max-content;
-}
-.promotion{
-    background-color: #333333;
-    padding: 5px;
-    display: flex;
-    justify-content: space-between;
-}
-#sale{
-    padding:5px;
-    color:#00A6FF;
-}
-#locations {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-#location {
-    color:#f6f6f6;
-    padding:5px;
-}
-.start-price {
-    text-decoration:line-through;
-    color:#00000060
-}
-.discount {
-    color:#2000d3;
-}
-#check{
-    color: #EC4104;
-    padding:5px;
-    padding:10px;
-}
+/*Mid Section*/
 .mid-section{
     display: flex;
     flex-direction: row;
@@ -79,6 +89,12 @@ nav{
     align-content: center;
     width:100%;
 }
+#check{
+    color: #EC4104;
+    padding:5px;
+    padding:10px;
+}
+/*Search Bar*/
 .search{
     margin-top:15px;
     margin-bottom:15px;
@@ -106,6 +122,7 @@ nav{
 .search:hover {
     background-color: #00000030;
 }
+/*Icons*/
 #icons {
     display: flex;
     justify-content: space-between;
@@ -118,14 +135,13 @@ nav{
     text-decoration: none;
     color: #000000;
 }
-.material-symbols-outlined{
-    margin:10px;
-}
+/*Showcase*/
 #showcase {
     display: flex;
     width: 100%;
     height:max-content;
 }
+/*Services provided*/
 #perks-list{
     margin: 25px;
     padding: 10px 50px;
@@ -148,12 +164,14 @@ section div {
     flex-direction: column;
     align-items: center;
 }
+/*Product Display*/
 .latest-product, #trending-product, #sale-product{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     justify-content: center;
+    gap:30px;
     align-items: center;
     padding:10px 40px;
 }
@@ -162,6 +180,9 @@ section div {
     flex-direction: column;
     align-items: center;
     border: 1px solid #00000020;
+}
+.product-display:hover {
+    transform: scale(1.05);
 }
 .product-display img{
     width:229px;
@@ -213,6 +234,7 @@ section div {
     justify-content: space-between;
     padding: 10px 50px;
 }
+/*Footer Mobile App Sect*/
 .mobile-app-images{
     display: flex;
     flex-direction: row;
@@ -280,6 +302,7 @@ section div {
 #learn-more-link:hover {
     text-decoration: underline;
 }
+/* Footer */
 footer {
     display: flex;
     flex-direction: column;
@@ -334,18 +357,18 @@ footer h2{
 .footer-links h2 {
     font-size: 30px;
 }
-#links {
+.links {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     gap: 10px;
     align-items: baseline;
 }
-#links a {
+.links a {
     color: #f6f6f6;
     font-size:20px;
 }
-#links a:hover {
+.links a:hover {
     text-decoration: underline;
 }
 #copyright{
@@ -444,7 +467,7 @@ footer h2{
     text-align: center;
     margin-bottom: 45px;
 }
-.product-listing-heading h1 {
+.product-listing-heading h2 {
     font-size: 40px;
     text-align: center;
     font-family: 'futura-pt', sans-serif;
@@ -464,6 +487,7 @@ footer h2{
     flex-wrap:wrap;
     gap: 10px;
 }
+/* Sneaker Product Display */
 .sneaker-product-display {
     display: flex;
     flex-direction: column;
@@ -485,6 +509,7 @@ footer h2{
     border: 1px solid #000000;
     background-color: #00000010;
 }
+/* Filter */
 .filter {
     display:flex;
     flex-direction: column;
@@ -723,7 +748,6 @@ footer h2{
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap; 
-        justify-content: none;
         gap: 0px; 
     }
 }
@@ -741,6 +765,7 @@ footer h2{
         gap:10px;
     }
 }
+/* Mobile */
 @media (max-width: 892px) {
     .socials-address {
         gap: 100px;
@@ -764,9 +789,6 @@ footer h2{
     .logo {
         font-size: 1.25rem;
         left: 20px;
-    }
-    .promotion {
-        display: none;
     }
     .mid-section {
         padding:0px;
@@ -809,7 +831,7 @@ footer h2{
     }
     #App-Store,#Google-Play,.QR-Code {
         margin:0px;
-        padding:10 0px 10px 10px;
+        padding:10px 0px 10px 10px;
     }
     .App-Qr-Codes {
         position: relative;

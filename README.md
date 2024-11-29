@@ -13,8 +13,8 @@ Present company and products in the best light and appeal to customers and win t
 - Navigation Bar to access other pages
 ### Suggested Javascript Features To Include:
 - Micro interactions when interacting with the site eg, clicking on an interactable area to show some animation, mouse over interactions, scrolling interactions when interacting with the site.
-- An input box to allow users to search for products
-- A product category dropdown box which allows users to filter products
+- A product category filter box which allows users to filter products
+- Add to cart function
 ## Credits
 Product images are adapted from the [Nike](https://www.nike.com/sg/), [New Balance](https://www.newbalance.com.sg/) and [Adidas website](https://www.adidas.com.sg/)
 Showcase poster was self-made with the use of shoe picture from [Pinterest](https://www.pinterest.com/)
