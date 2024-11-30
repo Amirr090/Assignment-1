@@ -1,8 +1,11 @@
 # Sneakr E-commerce Website Assignment-1
-## Design Process
-### External user's goal:
+## Figma Link
+[Figma](https://www.figma.com/design/CvukpWpf28CUN1c2uLo9Mr/FED_S10267740H_-Muhammad-Amiruddin-Bin-Marzuki_Assg1_wireframe?node-id=0-1&t=6x4s5wzddnTtA8Ew-1)
+## GitHub Link
+[GitHub](https://github.com/Amirr090/FED_S10267740H_-Muhammad-Amiruddin-Bin-Marzuki_Assg1_website.git)
+## External user's goal:
 The site's users are potential customers who are interesting in looking for more information about my products
-### Site owner's goal:
+## Site owner's goal:
 Present company and products in the best light and appeal to customers and win their trust and confidence
 ## Features
 ### Potential Features To Include:
@@ -15,6 +18,8 @@ Present company and products in the best light and appeal to customers and win t
 - Micro interactions when interacting with the site eg, clicking on an interactable area to show some animation, mouse over interactions, scrolling interactions when interacting with the site.
 - A product category filter box which allows users to filter products
 - Add to cart function
+## Design Rationale
+I chose this design for its sleek, minimalistic, and modern aesthetic, inspired by the approach of leading brands like Nike and Adidas. The layout features a promotion bar and a showcase poster to highlight available offers, capturing users' attention immediately. I selected Arial and Futura fonts, commonly used by Nike, to achieve a clean and streamlined look. The design promotes the website’s mobile app, providing customers with a more convenient shopping experience, while the filter function enhances user navigation, helping them find their ideal shoes easily. As an e-commerce website, I included an "Add to Cart" feature for seamless shopping, and an About page offers users more insight into the company. To maintain a minimalistic vibe, I kept animations to a minimum, ensuring the focus remains on the products themselves.
 ## Credits
 Product images are adapted from the [Nike](https://www.nike.com/sg/), [New Balance](https://www.newbalance.com.sg/) and [Adidas website](https://www.adidas.com.sg/)
 Showcase poster was self-made with the use of shoe picture from [Pinterest](https://www.pinterest.com/)

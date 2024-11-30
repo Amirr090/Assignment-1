@@ -508,6 +508,7 @@ footer h2{
 .sneaker-product-display:hover{
     border: 1px solid #000000;
     background-color: #00000010;
+    transform: scale(1.05);
 }
 /* Filter */
 .filter {
